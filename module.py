@@ -18,4 +18,11 @@ class ToDoManager:
                 status = "[X]" if task["completed"] else "[ ]"
                 print(f"{i}. {status} {task['name']}")
 
+    def delete_task(self, index):
+        """Deletes a task by its index."""
+        if 0 < index <= len(self.tasks):
+            removed_task = self.tasks.pop(index - 1)
+            print(f"Task removed: {removed_task['name']}")
+        else:
+            print("Invalid task number.")
 
