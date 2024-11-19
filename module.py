@@ -8,4 +8,14 @@ class ToDoManager:
         print(f"Task added: {task}")
 
 
+    def view_tasks(self):
+        """Displays all tasks in the to-do list."""
+        if not self.tasks:
+            print("No tasks available.")
+        else:
+            print("To-Do List:")
+            for i, task in enumerate(self.tasks, 1):
+                status = "[X]" if task["completed"] else "[ ]"
+                print(f"{i}. {status} {task['name']}")
+
 
