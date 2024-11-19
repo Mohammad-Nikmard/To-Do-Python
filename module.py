@@ -33,3 +33,11 @@ class ToDoManager:
             print("All tasks have been deleted.")
         else:
             print("No tasks to delete.")
+
+    def mark_task_as_complete(self, index):
+        """Marks a task as complete by its index."""
+        if 0 < index <= len(self.tasks):
+            self.tasks[index - 1]["completed"] = True
+            print(f"Task marked as complete: {self.tasks[index - 1]['name']}")
+        else:
+            print("Invalid task number.")
