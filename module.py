@@ -26,3 +26,10 @@ class ToDoManager:
         else:
             print("Invalid task number.")
 
+    def delete_all_tasks(self):
+        """Deletes all tasks from the to-do list."""
+        if self.tasks:
+            self.tasks.clear()
+            print("All tasks have been deleted.")
+        else:
+            print("No tasks to delete.")
