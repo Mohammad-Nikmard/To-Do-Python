@@ -8,3 +8,8 @@ def print_menu():
     print("5. Mark Task as Complete")
     print("6. Search for a Task")
     print("7. Exit")
+
+
+def get_user_input(prompt):
+    """Gets input from the user with the provided prompt."""
+    return input(prompt).strip()
