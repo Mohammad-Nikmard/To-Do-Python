@@ -41,3 +41,16 @@ class ToDoManager:
             print(f"Task marked as complete: {self.tasks[index - 1]['name']}")
         else:
             print("Invalid task number.")
+
+
+    def search_task(self, keyword):
+        """Searches for tasks containing the given keyword."""
+        found_tasks = [
+            f"{i}. {task['name']}" for i, task in enumerate(self.tasks, 1) if keyword.lower() in task["name"].lower()
+        ]
+        if found_tasks:
+            print("Search Results:")
+            for task in found_tasks:
+                print(task)
+        else:
+            print(f"No tasks found containing '{keyword
